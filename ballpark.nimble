@@ -1,6 +1,6 @@
 # Package
 
-version = "1.0.0"
+version = "1.0.1"
 author = "Eugene Medvedev (R2AZE)"
 description = "An amateur radio tool to get you a ballpark estimate of where a given Maidenhead grid square is."
 license = "MIT"
@@ -20,10 +20,6 @@ import os
 import distros
 from macros import error
 
-if findExe("python3") == "":
-  error("You require a Python 3 somewhere in your PATH " &
-        "to build the database files.")
-
 task db, "Prepare city database.":
 
   if not fileExists("db/countries.json") or
@@ -31,7 +27,7 @@ task db, "Prepare city database.":
      not fileExists("db/regions.json"):
 
     echo("=== Preparing city database for embedding.")
-    exec "python3 convert-db.py"
+    selfExec "--maxLoopIterationsVM:50000000 convertdb.nims"
 
 # Before building, ensure the database was converted.
 before build:
