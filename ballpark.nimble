@@ -1,6 +1,6 @@
 # Package
 
-version = "1.0.0"
+version = "1.0.1"
 author = "Eugene Medvedev (R2AZE)"
 description = "An amateur radio tool to get you a ballpark estimate of where a given Maidenhead grid square is."
 license = "MIT"
