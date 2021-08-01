@@ -59,9 +59,9 @@ func closestCity*(coords: Geo): City =
     let d = distance(coords, city.loc)
     if d < distance(coords, closest.loc):
       closest = city
-    # If we landed inside the radius of a big city, stop.
-    if d <= closest.radius:
-      break
+      # If we landed inside the radius of a big city, stop.
+      if d <= city.radius:
+         break
 
   result.name = closest.name
   result.loc = closest.loc
