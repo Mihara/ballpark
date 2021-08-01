@@ -42,7 +42,7 @@ The program will track writes to this file, and check every grid square it finds
 
 ## Compilation
 
-Ballpark is written in [Nim](https://nim-lang.org/). To prepare the database file for embedding into the executable you will also need Python 3.
+Ballpark is written in [Nim](https://nim-lang.org/). You shouldn't need anything else to compile it, though cross-platform building and producing static binaries is a different matter -- see comments in [ballpark.nimble](ballpark.nimble) for details.
 
 It builds for all flavors of Linux, including Raspbian, as well as Windows command line. There is currently no OSX build and I don't know how to do one properly without building on OSX itself, though there's no reason it shouldn't be possible.
 
