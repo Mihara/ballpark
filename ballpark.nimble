@@ -1,6 +1,6 @@
 # Package
 
-version = "1.0.1"
+version = "1.0.2"
 author = "Eugene Medvedev (R2AZE)"
 description = "An amateur radio tool to get you a ballpark estimate of where a given Maidenhead grid square is."
 license = "MIT"
@@ -11,7 +11,7 @@ binDir = "build"
 # Dependencies
 
 requires "nim >= 1.4.8"
-requires "fsnotify >= 0.1.0"
+requires "fsnotify >= 0.1.4"
 
 # Tasks
 

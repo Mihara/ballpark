@@ -142,7 +142,7 @@ when isMainModule:
   # Now, if this is a filename that exists...
   if fileExists(arg):
     var
-      watcher = initWatcher(1)
+      watcher = initWatcher()
 
     if not open(logfile, arg):
       echo("Error: Could not open the log file.")
